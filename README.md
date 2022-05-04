@@ -1,92 +1,29 @@
-# MCMC
-Workshop on MCMC
-
-This workshop 
-
-In this project we deal with the design and control of a drone that can transport packages to different locations. The drone consists of 4 propellers and a gripper at the bottom which can be used to pick and place objects. It consists of a camera, four laser sensors that are used to detect any surrounding obstacles, and GPS and IMU sensors to get the position and orientation estimate of the drone. We built a cascaded control system which uses two PID controllers to control the roll, pitch, yaw and position of the drone. We used motor mixing algorithms to convert these control signals into signals that power the propellers. To avoid obstacles we had used bug0 algorithms. We used machine learning algorithms to generate haarcascade files to detect markers so that the drone could be landed on the marker. 
+# Introduction to Monte Carlo methods using Python
+### (With real world examples in Astronomy and Cosmology)
 
 ---
 
-### Table of Contents
-
-- [Installation](#installation)
-- [Technologies](#technologies)
-- [How To Use](#how-to-use)
-- [Other links](#other-links)
-- [References](#references)
-- [Author Info](#author-info)
+In this workshop we will discuss Markov-Chain Monte Carlo (MCMC) at the introductory level. This repository has few examples which compliment the lectures. MCMC is a popular method which is employed in various branches of physics. For example in Astrophysics the radiative transfer codes are usually MCMC simulations. We use MCMC in particle physics for estimating background process. THe cosmological model parameters can be estimated by performing MCMC analysis on the dataset. It can also be used to have numerical approximations of multi-dimenssional integrals. 
 
 ---
 
-## Installation
+We start with basics of Statistics, with emphasis on Baysian Statistics. Parallely we go through fundamentals of Cosmology on the fisrt day of workshop. On the second day we bring these two things together using some examples.
 
-- Use these commands to install ROS Melodic on Ubuntu 18.04: 
-    > sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'  
-    > sudo apt install curl  
-    > curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -  
-    > sudo apt update  
-    > sudo apt install ros-melodic-desktop-full
-
-- Install git
-    > apt-get install git
-
-- Creating catkin workspace: 
-    > source /opt/ros/melodic/setup.bash  
-    > mkdir -p ~/catkin_ws/src  
-    > cd ~/catkin_ws/  
-    > catkin build  
-    > source devel/setup.bash  
- 
- - Cloning the github repository
-    > cd ~/catkin_ws/src/
-    > git clone https://github.com/Electronics-Creed/Transportation-Drone.git
- 
----
-
-## Technologies
-
-- Arduino
-- MATLAB
-- Simulink
-
----
-
-## How To Use
-
-#### Simulation
-Run the simulaiton.mlx file section by section in MATLAB to visualize the motion of the robotic arm which is created using the robotics toolbox. In the first and second section we create the robot model and initialize necessary parameters. In the third section we move the robot arm to a given point and in the fourth section we move the robotic arm through given set of waypoints. In the subsequent section some funtions have been defined.
-
-#### Hardware
-The files used for hardware implementation are hardware_implementation1.slx and hardware_implementation2.slx. The file hardware_implementation1.slx is used to move the robot arm to a given point and activate the gripper. The second file is used to move the robotic arm through given set of waypoints and activate the gripper at the required points. Refer the circuit diagram for the connections to Arduino.
-
----
-
-## Other links
-
-Drive link: 
- > https://drive.google.com/drive/folders/1rfMxBnnn4IuiM7Yzvbfr_llIJidcPY3G?usp=sharing
-
-Youtube playlist
- > https://www.youtube.com/playlist?list=PLSWRiv_s7diOQ1Fk6TX-yL9LCNg870Yoa
-
----
-
-## References
-
-Robotics toolbox, MATLAB robotics toolbox by Peter Corke
- > https://www.petercorke.com/RTB/r9/html/SerialLink.html
-
-Simulink Support Package for Arduino Hardware User’s Guide, Mathworks
- > https://in.mathworks.com/help/pdf_doc/supportpkg/arduino/arduino_ug.pdf
-
-3 Axis Robotic Arm , Abhivyakti Sharma, Kshitija Kanase, Vipul Pandey, C. K. Bhange
- > https://www.ijresm.com/Vol.2_2019/Vol2_Iss6_June19/IJRESM_V2_I6_25.pdf
-
----
+#### The examples include:
+ - estimating value of Pi (without using MCMC)
+ - estimating value of PI (using MCMC)
+ - Hubble's constant estimation
+ - estimating cosmological parameters
 
 ## Author Info
+- <B>Prajwal Hassan Puttasiddappa</B>  https://reasonableuniverse.wordpress.com/
 
-- H P Jeevan https://www.linkedin.com/in/h-p-jeevan-08607a1a8
-- G Rohith https://www.linkedin.com/in/g-rohith-17921a1b8
-- Emyl Varghese George https://www.linkedin.com/in/emyl-varghese-george-4aa53220b  
-- K Sai Kumar https://www.linkedin.com/in/k-sai-kumar-2b6098180/  
+Prajwal is a Physics Masters student studying in Ruprecht-Karls-Universität Heidelberg. He works on Fifth Forrce and Screening Mechanisms and is intrested in other aspects of Cosmology and Particle physics.
+
+
+- <B>H P Jeevan</B> https://www.linkedin.com/in/h-p-jeevan-08607a1a8
+
+Jeevan is a Electronics and Communications Engineering student in Bangalore Insitute of Technology. His intresets include Machine Learning, and Robotics.
+
+#### Organisation:
+This workshop is a part of Bhuvanam Project. Bhuvanam project organises various seminars and workshops. For more details visit the webpage - https://bhuvanamproject.wordpress.com/
